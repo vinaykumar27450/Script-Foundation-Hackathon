@@ -50,20 +50,109 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden; /*to remove the little shaking of object while performing animations on them*/
+  margin-bottom: 60px;
 }
 .heading-primary-main {
   display: block;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 100px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+.btn-white {
+  color: #777;
+  background-color: #fff;
+}
+.btn-white::after {
+  color: #777;
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.4); /*Increases the element. Eg <2> means double */
+  opacity: 0;
+}
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out backwards;
+  animation-delay: 0.75s;
 }
