@@ -6,18 +6,24 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; /******** 16px = 100% ***** 62.5% = (10/16)*100 ****/
 }
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 .header {
   height: 95vh;
@@ -37,15 +43,15 @@ body {
     0 100%
   ); /*(top-left, top-right, bottom-right, bottom-left)*/
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
-  left: 40px;
-  top: 40px;
+  left: 4rem;
+  top: 4rem;
 }
-.logo {
-  height: 35px;
+.header__logo {
+  height: 3.5rem;
 }
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -56,31 +62,29 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; /*to remove the little shaking of object while performing animations on them*/
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  letter-spacing: 3.5rem;
+  animation: moveInLeft 1s ease-out;
 }
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -90,10 +94,10 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -103,7 +107,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
@@ -114,37 +118,38 @@ body {
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
   display: inline-block;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   transition: all 0.4s;
 }
-.btn-white {
+.btn--white {
   color: #777;
   background-color: #fff;
 }
-.btn-white::after {
+.btn--white::after {
   color: #777;
   background-color: #fff;
 }
@@ -152,7 +157,7 @@ body {
   transform: scaleX(1.2) scaleY(1.4); /*Increases the element. Eg <2> means double */
   opacity: 0;
 }
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out backwards;
   animation-delay: 0.75s;
 }
