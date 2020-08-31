@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>User Information</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/navigation.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <section id="header">
+      <div class="header-navbar">
+        <div class="nav-bar container">
+          <div id="logo">
+            <a href="index.html">
+              <h1>Health<span>Card</span></h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li>
+                <a href="index.html" data-after="Home">Home</a>
+              </li>
+              <li><a href="userinfo.html" class="active">Form</a></li>
+              <!-- <li><a href="contact.html" data-after="Contact">Contact</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container" style="padding-top: 100px">
+      <h1>User Info</h1>
+      <div class="row">
+        <div class="col-11">
+          <form action="#">
+            <h5>Personal Information</h5>
+            <div class="form-group row">
+              <label for="firstname" class="col-3 col-md-2 col-form-label align-self-center">First Name:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="firstname" placeholder="First Name" name="firstname">
+              <label for="lastname" class="col-3 col-md-2 col-form-label align-self-center">Last name:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="lastname" placeholder="Last Name" name="lastname">
+            </div>
+            <div class="form-group row">
+              <label for="dob" class="col-3 col-md-2 col-form-label align-self-center">Date of Birth:</label>
+              <input type="date" class="form-control col-9 col-md-4" id="dob" name="dob"> 
+              <label for="place" class="col-3 col-md-2 col-form-label align-self-center">Place of Birth:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="place" name="place" placeholder="Place of Birth">
+            </div>
+            <br>
+            <h5>Address and Contact</h5>
+            <div class="form-group row">
+              <label for="address" class="col-3 col-md-2 col-form-label align-self-center">Address:</label>
+              <textarea id="address" class="col-9 col-md-10 form-control" name="address" rows="2"></textarea>
+            </div>
+            <div class="form-group row">
+              <label for="city" class="col-3 col-md-2 col-form-label align-self-center">City:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="city" name="city" placeholder="City">
+              <label for="state" class="col-3 col-md-2 col-form-label align-self-center">State/ Province:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="state" name="state" placeholder="State/Province">
+            </div>
+            <div class="form-group row">
+              <label for="country" class="col-3 col-md-2 col-form-label align-self-center">Country:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="country" name="country" placeholder="Country">
+              <label for="zip" class="col-3 col-md-2 col-form-label align-self-center">Zip Code:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="zip" name="Zip" placeholder="Zip Code">
+            </div>
+            <div class="form-group row">
+              <label for="email2" class="col-3 col-md-2 col-form-label align-self-center">Alternate email address:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="email2" name="email2" placeholder="Alternate email (if any)">
+              <label for="phone2" class="col-3 col-md-2 col-form-label align-self-center">Alternate Contact Number:</label>
+              <input type="text" class="form-control col-9 col-md-4" id="phone2" name="phone2" placeholder="Alternate Contact Number(if any)">
+            </div>
+            <br>
+            <h5>Medical Information</h5>
+            <div class="form-group row">
+              <label for="height" class="col-3 col-md-2 col-form-label align-self-center">Height:</label>
+              <input type="text" class="form-control col-9 col-md-2" id="height" name="height" placeholder="Height(in ft)">
+              <label for="weight" class="col-3 col-md-2 col-form-label align-self-center">Weight:</label>
+              <input type="text" class="form-control col-9 col-md-2" id="weight" name="weight" placeholder="Weight(in kgs)">
+              <label for="blood" class="col-3 col-md-2 col-form-label align-self-center">Blood Group:</label>
+              <input type="text" class="form-control col-9 col-md-2" id="blood" name="blood" placeholder="Blood Group">
+            </div>
+            <div class="form-group row">
+              <label for="illness" class="col-3 col-md-2 col-form-label align-self-center">Illness (if any):</label>
+              <textarea  id="illness" class="col-9 col-md-10 form-control" name="illness" rows="2"></textarea>
+            </div>
+            <div class="form-group row">
+              <label for="medication" class="col-3 col-md-2 col-form-label align-self-center">Medication (if any):</label>
+              <textarea id="medication" class="col-9 col-md-10 form-control" name="medication" rows="2"></textarea>
+            </div>
+            <div class="form-group row">
+              <label for="file" class="col-3 col-md-2 col-form-label align-self-center">Document:</label>
+              <input type="file" name="file" id="file" accept=".jpeg,.jpg">
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 col-md-4 offset-sm-4 offset-md-5">
+                <input type="submit" class="btn btn-outline-primary btn-md btn-block submit">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
