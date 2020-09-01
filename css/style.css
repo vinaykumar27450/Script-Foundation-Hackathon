@@ -271,3 +271,21 @@ body {
 	margin-top: -1rem;
 }
 /******** Product Section end ********/
+.jumbotron {
+	font-size: 1.8rem;
+	margin: 0px;
+	background-image: linear-gradient(to right, rgba(105, 124, 165, 0.85), rgba(20, 116, 133, 0.8));
+	color: white;
+}
+ul {
+	list-style: none;
+}
+li > a {
+	color: white;
+}
+li > a:hover {
+	color: rgb(179, 205, 216);
+}
+.icon {
+	background: none;
+}
