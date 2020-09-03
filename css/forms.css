@@ -109,6 +109,13 @@ h5 {
 	background-image: linear-gradient(to right, rgba(105, 124, 165, 0.4), rgba(20, 116, 133, 0.4));
 	color: rgb(20, 116, 133);
 }
+#userinfo {
+	padding: 60px;
+	font-size: 1.1rem;
+	margin: 30px 0px 0px 0px;
+	background-image: linear-gradient(to right, rgba(174, 186, 211), rgb(134, 188, 197));
+	color: rgb(20, 116, 133);
+}
 ul {
 	list-style: none;
 }

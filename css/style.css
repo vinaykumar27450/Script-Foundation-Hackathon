@@ -92,6 +92,14 @@ body {
 	letter-spacing: 3rem;
 	animation: moveInLeft 1s ease-out;
 }
+.heading-primary-menu {
+	display: block;
+	font-size: 6rem;
+	font-weight: 400;
+	/* letter-spacing: 3.5rem; */
+	letter-spacing: 2rem;
+	animation: moveInLeft 1s ease-out;
+}
 .heading-primary--sub {
 	display: block;
 	font-size: 2rem;
@@ -99,6 +107,7 @@ body {
 	letter-spacing: 1.65rem;
 	animation: moveInRight 1s ease-out;
 	margin-left: -1rem;
+	color: whitesmoke;
 }
 
 .heading-secondary {
@@ -200,6 +209,17 @@ body {
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	/*(top-left, top-right, bottom-right, bottom-left)*/
 }
+.header-menu {
+	margin-top: 5rem;
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, rgba(105, 124, 165, 0.85), rgba(20, 116, 133, 0.8)),
+		url(../img/p2.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+	/*(top-left, top-right, bottom-right, bottom-left)*/
+}
 .header__logo-box {
 	position: absolute;
 	left: 4rem;
@@ -271,6 +291,8 @@ body {
 	margin-top: -1rem;
 }
 /******** Product Section end ********/
+
+/* Footer elements */
 .jumbotron {
 	font-size: 1.8rem;
 	margin: 0px;
@@ -279,6 +301,7 @@ body {
 }
 ul {
 	list-style: none;
+	margin-bottom: 20px;
 }
 li > a {
 	color: white;
