@@ -6,10 +6,8 @@ include("connection.php");
 //Check user inputs
 $password = $_POST["password"];
 $email = $_POST["email"];
-$username = $_POST["username"];
-    //Define error messages
+
 $missingEmail = '<p><stong>Please enter your email address!</strong></p>';
-$missingUsername = '<p><stong>Please enter your Username!</strong></p>';
 $missingPassword = '<p><stong>Please enter your password!</strong></p>'; 
 $errors = "";
     //Get email and password
@@ -21,14 +19,6 @@ if(empty($_POST["email"])){
     exit;
 }else{
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-}
-if(empty($_POST["username"])){
-    $errors .= $missingUsername;   
-    $resultMessage = '<div class="alert alert-danger">' . $errors .'</div>';
-    echo $resultMessage;
-    exit;
-}else{
-    $password = filter_var($_POST["username"], FILTER_SANITIZE_STRING);
 }
 if(empty($_POST["password"])){
     $errors .= $missingPassword; 
@@ -45,7 +35,7 @@ if(empty($_POST["password"])){
 $password = mysqli_real_escape_string($link, $password);
 $password = hash('sha256', $password);
  //Run query: Check combinaton of email & password exists
-$sql = "SELECT * FROM users WHERE email='$email' AND password='$password' AND username='$username'";
+$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 $result = mysqli_query($link, $sql);
 if(!$result){
  echo '<div class="alert alert-danger">Error running the query!</div>';
@@ -61,8 +51,7 @@ else {
  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
  $_SESSION['user_id']=$row['user_id'];
  $_SESSION['username']=$row['username'];
- $_SESSION['email']=$row['email'];
+ $_SESSION['qrcode']=$row['qrcode'];
  echo "success";
 }
-
-                    ?>
+?>

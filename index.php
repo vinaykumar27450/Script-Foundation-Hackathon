@@ -1,0 +1,212 @@
+<?php
+session_start();
+include('connection.php');
+if($_SESSION['user_id']&&!$_GET['logout']){
+header("Location:menu.php");
+}
+//logout
+include('logout.php');
+//
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon/favicon.png">
+    <title>Health Card</title>
+</head>
+
+<body>
+    <!-- <a href="https://icons8.com/icon/43185/qr-code">QR Code icon by Icons8</a> -->
+
+    <!-- Navigation bar -->
+    <section id="header">
+        <div class="header-navbar">
+            <div class="nav-bar container">
+                <div id="logo">
+                    <a href="index.html">
+                        <h1>Health<span>Card</span></h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="index.php" data-after="Home" class="active">Home</a>
+                        </li>
+
+                        <li><a href="login.html" data-after="Form">Login</a></li>
+                        <li><a href="signup.html" data-after="Form">Sign Up</a></li>
+
+                        <!-- <li><a href="contact.html" data-after="Contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Navigation Bar end -->
+
+    <!---------- Header -------------->
+    <header class="header">
+        <!-- <div class="header__logo-box">
+        <img src="./img/logo-white.png" alt="Logo" class="header__logo" />
+      </div> -->
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main" style="line-height: 11rem">
+                    Health Card
+                </span>
+                <span class="heading-primary--sub"> Medical records made easy </span>
+            </h1>
+            <a href="" class="btn btn--white btn--animated"> Enroll Now</a>
+        </div>
+    </header>
+    <!--------- End Header --------->
+
+    <!--------- About section --------->
+    <main>
+        <section class="about-section">
+            <div class="u-center-text about-section__heading">
+                <h2 class="heading-secondary">Why Health Card?</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="abut-section__image col-sm-12 col-md-6 col-lg-6 u-center-text">
+                        <img src="img/doc2.gif" alt="" style="max-width: 40rem" />
+                    </div>
+                    <div class="about-section__content col-sm-12 col-md-6 col-lg-6">
+                        <p>
+                            <b>
+                                <em>You don't know your medical history, <br />
+                                    but your Health Card knows!
+                                </em></b>
+                            <br />
+                            <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Delectus, porro. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Odit exercitationem, ipsum incidunt eum
+                            blanditiis molestias tempora dolores itaque veniam voluptates?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----------- End About Section ------------>
+
+        <!---------------- Features ------------------->
+        <section class="features">
+            <div class="content">
+                <!-- card -->
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/dusk/64/000000/qr-code.png" />
+                    </div>
+                    <p class="title">QR Code</p>
+                    <p class="text">
+                        Generates a QR Code that contains all your medical history
+                    </p>
+                </div>
+                <!-- end card -->
+
+                <!-- card -->
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/dusk/64/000000/database-restore.png" />
+                    </div>
+                    <p class="title">Health Repository</p>
+                    <p class="text">All your reports in one place</p>
+                </div>
+                <!-- end card -->
+
+                <!-- card -->
+                <div class="card">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/dusk/64/000000/bank-card-back-side.png" />
+                    </div>
+                    <p class="title">Medical Identity</p>
+                    <p class="text">
+                        The Health Card is enough for your <em> Medical Identity</em>
+                    </p>
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- </div> -->
+        </section>
+        <!---------------- Features end------------------->
+
+        <!---------------- Product section ------------------->
+        <!-- <div class="container"> -->
+        <div class="product text-center">
+            <div class="product__heading">
+                <h1 class="heading-primary">
+                    <span class="heading-secondary"> Checkout Our Product </span>
+                </h1>
+            </div>
+            <p class="product-content">
+                Want a card for yourself? Go get one! <br />
+                It is just one click away!
+            </p>
+            <a href="signup.html" class="btn btn--blue btn--animated"> Enroll Now</a>
+        </div>
+        <!-- </div> -->
+        <!---------------- Product section end------------------->
+        <!-- Footer -->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 align-self-center">
+                        <strong>Navigate</strong>
+                        <ul>
+                            <li><a href="index.php" class="ft">HOME</a></li>
+                            <!-- <li><a href="#" class="ft">About</a></li>
+                <li><a href="#" class="ft">Index</a></li> -->
+                            <li><a href="login.html" class="ft">Login</a></li>
+                            <li><a href="signup.html">Enroll Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-4 align-self-center">
+                        <strong>Our Developers </strong><i class="cog icon"></i>
+                        <ul>
+                            <li><a href="#" class="ft">Namita Goyal</a></li>
+                            <li><a href="https://github.com/Shubh4m-B" class="ft">Shubham Bhardwaj</a></li>
+                            <li><a href="https://github.com/varunvj1" class="ft">Varun Jain</a></li>
+                            <li><a href="https://github.com/vinaykumar27450" class="ft">Vinay Kumar</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-4 align-self-center">
+                        <strong>Contact Us</strong>
+                        <ul>
+                            <li><a href="#" class="ft"><i class="envelope icon"></i>Email</a></li>
+                            <li><a href="#" class="ft"><i class="phone icon"></i>Phone</a></li>
+                            <li><a href="#" class="ft"><i class="fax icon"></i>Fax</a></li>
+                            <li><a href="#" class="ft"><i class="ellipsis horizontal icon"></i>More</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    Script Foundation Hackathon: Delhi Hacks &#169; 2020
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+<script src="js/navigation.js"></script>
+
+</html>
