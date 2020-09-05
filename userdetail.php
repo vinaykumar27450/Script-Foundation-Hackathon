@@ -59,7 +59,7 @@ if(!$result)
     display:none;
     }
     </style>';
-    echo '<div style="height:200px;margin-top:200px;margin-left:40px;"><h1>No Data Found</h1></div>';
+    echo '<div style="height:200px;margin-top:200px;margin-left:40px;"><h1>No Details Found</h1></div>';
 }
 ?>
     <!-- Userdetail -->
@@ -145,12 +145,32 @@ if(!$result)
                     echo "<div class='row detail-row'><div class='col-6'>Medication:</div><div class='col-6'>".$row['medication']." </div></div>";
                 }
                 ?>
-
-
-
             </div>
         </div>
     </div>
+
+    <div class="conatainer" style="margin: 100px 30px 0px 30px;">
+        <div class="row">
+            <?php
+                $sql = "SELECT * FROM userdocument WHERE user_id = ".$_SESSION['user_id'];
+                $result = mysqli_query($link,$sql);
+//                $row = mysqli_fetch_array($result,mysqli_num);
+
+                $count = mysqli_num_rows($result);
+                if($count)
+                {
+                    for($i=0;$i<$count;$i++)
+                    {
+                        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+                        echo '<div class="row detail-row">
+                    <div class="col-6"><a href="uploads/'.$row['docname'].'" target="_blank"><img src="uploads/'.$row['docname'].'"></a></div></div>';
+                    }
+                    
+                }
+                ?>
+        </div>
+    </div>
+
     <!-- Userdetail End -->
     <!-- Footer -->
     <div id="userinfo">
